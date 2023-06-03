@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    
+    "create": "node index.js create",
     "index": "node index.js index",
     "view": "node index.js view",
     "update":"node index.js update",
