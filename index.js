@@ -34,7 +34,7 @@ function run(){
                 const productDelete = toDelete(array, target )
 
             case "create":
-                const createDelete = toDelete(array, target )
+                const createDelete = toCreate(array, target )
 
 
  }
