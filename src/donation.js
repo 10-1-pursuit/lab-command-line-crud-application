@@ -4,8 +4,8 @@ const calculateDonation = () => {
     const purchases = getAllPurchases();
     let totalDonation = 0
     for (const purchase of purchases){
-        totalDonation += purchase.donation;
+        totalDonation += parseFloat(purchase.donation);
     }
-    return totalDonation.toFixed(2);
+    return totalDonation;
 }
  module.exports = { calculateDonation };
