@@ -10,8 +10,8 @@ function create(customerPurchases, purchaseItem){ // customerPurchases = custome
     const newPurchase = {
         id: `${nanoid(4)}`,
         name: purchaseItem,
-        cost: inventory[purchaseItem]
-        
+        cost: inventory[purchaseItem].toFixed(2),
+        donation: Number(((Math.ceil(inventory[purchaseItem])) - inventory[purchaseItem]).toFixed(2))
     }
         customerPurchases.push(newPurchase)
         return customerPurchases
