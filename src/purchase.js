@@ -32,6 +32,7 @@ const updatePurchase = (id, newName, newAmount) => {
     if (index === -1) return null;
     const updatedPurchase = {...purchases[index], name: newName, amount: newAmount, donation: (roundUp(newAmount) - newAmount).toFixed(2)};
     purchases[index] = updatedPurchase;
+    writeJSONFile("../data", "purchases.json", purchases);
     return updatedPurchase;
 }
 

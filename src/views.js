@@ -18,7 +18,7 @@ const showAllPurchases = () => {
     const columns = `${chalk.bold("ID")} | ${chalk.bold("Name")}`;
     const purchaseRows = purchases.map((p) => `${p.id} | ${p.name}`).join('\n');
     return `
-    ${chalk.bold('All Purchases')}
+    ${chalk.bold('All Purchases\n')}
     ${columns}
     ${purchaseRows}`
 }
