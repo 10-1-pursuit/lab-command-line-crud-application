@@ -9,8 +9,6 @@ const id =nanoid();
 //console.log(id)making sure nanoid is working
 //console.log(chalk.blue(id))// nanoid working with chalk
 
-    
-
 
 //import {chalk} from 'chalk';
 
