@@ -1,48 +1,51 @@
-//console.log("hit or miss")
 
+const chalk = require('chalk');
 const { readJSONFile, writeJSONFile } = require("./src/helpers")
-const { index, show, create, edit} = require("./src/animalsController");
+const { index, show, create, edit, destroy} = require("./src/stylesController");
 const inform = console.log;
-//inform("🎊")
+
 
 function run() {
-    inform("Welcome to our  App 🦁🐱\n\n");
+    inform("Welcome to our  App 💆🏽‍♀️🪮\n\n");
 
-    let '' = readJSONFile("data", "animals.json");
-    console.log("the animals from indexJS", animals)
+    let styles = readJSONFile("data", "styles.json");
+    console.log("the style from indexJS", styles)
 
     const action = process.argv[2]; //action user typed in
-    const (putSomething) = process.argv[3]; //animal
+    const styleId = process.argv[3]; //style
     let writeToFile = false;
 
     switch (action) {
         case "index":
-            //animals
-            const animalsView = index()
-            inform(View);
+            const styleView = index(styles)
+            inform(styleView);
             break;
         case "show":
-            const ViewShow = show()
-            inform(animalsViewShow);
+            const viewShow = show(styles, styleId)
+            inform(viewShow);
             break;
         case "update":
-            updatedAnimals = edit(animals, animal, process.argv[4]);
+            updatedPurchases = edit(styles, styleId, process.argv[4]);
              writeToFile = true;
              break;
         case "create":
-            updatedAnimals = create(animals, animal);
+            updatedStyle = create(styles, styleId);
             writeToFile = true;
             break;
         case "destroy":
-            updatedAnimals = destroy(animals, animal);
+            updatednewStyle = destroy(styles, styleId );
              writeToFile = true;
             break;
 
         default: 
-        inform("Hey, we can't do that 🫠");
+        inform("Hey, did you forget something? Your cart is empty 🫠");
         
     }
-//console.log("\nIGNORE THIS\nall the turtles 🐢")
+    if (writeToFile) {
+    writeJSONFile("data", "styles.json", styles);
+    inform("Thank you. Styles have been updated");
+    }
 
 }
 run()
+

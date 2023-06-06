@@ -1,0 +1,33 @@
+[
+    {
+        "id": "nanoid(4)",
+        "name": "Knotless braids",
+        "amount": 220.22,
+        "donation": 20
+    },
+    {
+        "id": "nanoid(4)",
+        "name": "Crochet braids",
+        "amount": 140.44,
+        "donation": 20
+    },
+    {
+        "id": "nanoid(4)",
+        "name": "Starter Locs",
+        "amount": 80.88,
+        "donation": 20
+    },
+    {
+        "id": "nanoid(4)",
+        "name": "Locs tighten/retwist",
+        "amount": 100.1,
+        "donation": 20
+    },
+    {
+        "id": "nanoid(4)",
+        "name": "Kids' styles",
+        "amount": 55.55,
+        "donation": 20
+    }
+    
+]
