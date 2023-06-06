@@ -1,6 +1,6 @@
 const { nanoid } = require("nanoid");
 const fs = require("fs")
-const path = "../data"
+const path = "./data"
 const fileName = "purchases.json"
 
 const roundUp = num => Math.ceil(num)
@@ -21,7 +21,7 @@ const createPurchase = (name, amount) => {
     const purchase = { id, name, amount, donation };
     const purchases = getAllPurchases();
     purchases.push(purchase);
-    writeJSONFile("../data", "purchases.json", purchases);
+    writeJSONFile("./data", "purchases.json", purchases);
     return purchase;
     
 }
@@ -32,7 +32,7 @@ const updatePurchase = (id, newName, newAmount) => {
     if (index === -1) return null;
     const updatedPurchase = {...purchases[index], name: newName, amount: newAmount, donation: (roundUp(newAmount) - newAmount).toFixed(2)};
     purchases[index] = updatedPurchase;
-    writeJSONFile("../data", "purchases.json", purchases);
+    writeJSONFile("./data", "purchases.json", purchases);
     return updatedPurchase;
 }
 
@@ -42,16 +42,17 @@ const deletePurchase = id => {
     if (index === -1) return null;
     const deletedPurchase = purchases[index];
     purchases.splice(index, 1);
-    writeJSONFile("../data", "purchases.json", purchases);
+    writeJSONFile("./data", "purchases.json", purchases);
     return deletedPurchase
 }
 
 const getPurchase = id => {
-    const purchases = readJSONFile("../data", "purchases.json");
-    return purchases.find((p) => p.id === id)
+    const purchases = readJSONFile("./data", "purchases.json");
+    const purchaseById = purchases.find((p) => p.id === id)
+    return purchaseById ? purchaseById : []
 };
 
-const getAllPurchases = () => readJSONFile("../data", "purchases.json");
+const getAllPurchases = () => readJSONFile("./data", "purchases.json");
 
 module.exports = {
     createPurchase,
