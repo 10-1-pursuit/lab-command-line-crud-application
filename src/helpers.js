@@ -12,11 +12,6 @@ const id =nanoid();
 
 //import {chalk} from 'chalk';
 
-//console.log(chalk.blue('Hello') + ' World' + chalk.red('!'));
-
-
-
-
 function readJSONFile(path, fileName){
 
     const object = readFileSync(`${path}/${fileName}`, "utf-8")

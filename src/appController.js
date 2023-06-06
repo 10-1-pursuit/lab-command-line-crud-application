@@ -1,4 +1,10 @@
+const { nanoid } = require('nanoid');
+
 const inform = console.log
+const chalk = require('chalk');
+
+
+
 
 
 
@@ -12,7 +18,7 @@ function index(arrayOfProducts){
 function show(arrayOfProducts,productId){
     const productToFind= arrayOfProducts.find((product)=> product.id === productId);
 
-    return productToFind.id + " " + productToFind.name + " " + productToFind.amount + productToFind.donation;
+    return chalk.blue(productToFind.id) + " " + chalk.blue(productToFind.name) + " " + chalk.blue(productToFind.amount + " " +chalk.blue(productToFind.donation));
 
 }
 
@@ -21,7 +27,7 @@ function create (products, productName,productAmount,productDonation) {
         id: nanoid(4),
       name: productName,
       amount: productAmount,
-      donation: productDonation,
+      donation: productDonation.toFixed(2),
       
       
     };
