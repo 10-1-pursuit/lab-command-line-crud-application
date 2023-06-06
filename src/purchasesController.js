@@ -26,11 +26,16 @@ function index(customerPurchases) {
 
 function view(customerPurchases, purchaseItem) {
   let singlePurchaseInfo = customerPurchases.filter(
-    (item) => item.name === purchaseItem)
-
-    return singlePurchaseInfo
+    (item) => item.name === purchaseItem
+  );
+  for (let info of singlePurchaseInfo) {
+    return chalk.bgWhite(`${chalk.green("id")} ${chalk.black(info.id)} ${chalk.green("name")} ${
+        chalk.black(info.name)
+    } ${chalk.green("amount")} ${chalk.black(info.cost)} ${chalk.green(
+      "donation"
+    )} ${chalk.yellow(info.donation)}`);
+  }
 }
-
 
 function update(customerPurchases, purchaseId, updatedPurchase) {
   const index = customerPurchases.findIndex(
