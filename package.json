@@ -1,0 +1,25 @@
+{
+  "name": "lab-command-line-crud-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "create": "node src/index.js create",
+    "update": "node src/index.js update",
+    "remove": "node src/index.js remove",
+    "index": "node src/index.js index",
+    "list": "node src/index.js list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "nanoid": "^3.3.6"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
