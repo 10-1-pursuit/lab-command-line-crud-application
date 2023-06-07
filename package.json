@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "create": "node src/index.js create",
+    "update": "node src/index.js update",
+    "remove": "node src/index.js remove",
+    "index": "node src/index.js index",
+    "list": "node src/index.js list"
   },
   "keywords": [],
   "author": "",
