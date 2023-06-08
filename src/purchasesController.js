@@ -20,7 +20,17 @@ function index(purchases) {
 		.join('\n');
 }
 
+function show(purchases, purchaseId) {
+	const purchase = purchases.find((purchase) => purchase.id === purchaseId);
+	return `${chalk.magenta('id')} ${purchase.id} ${chalk.yellow('name')} ${
+		purchase.name
+	} ${chalk.redBright('amount')} ${chalk.green(
+		purchase.amount
+	)} ${chalk.yellowBright('donation')} ${chalk.green(purchase.donation)}`;
+}
+
 module.exports = {
 	create,
 	index,
+	show,
 };

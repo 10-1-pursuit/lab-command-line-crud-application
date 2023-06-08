@@ -1,5 +1,5 @@
 const { writeJSONFile, readJSONFile } = require('./src/helpers');
-const { create, index } = require('./src/purchasesController');
+const { create, index, show } = require('./src/purchasesController');
 
 const inform = console.log;
 
@@ -22,6 +22,10 @@ function run() {
 		case 'create':
 			updatedPurchases = create(purchases, purchase, amount, donation);
 			writeToFile = true;
+			break;
+		case 'show':
+			const purchaseView = show(purchases, purchase);
+			inform(purchaseView);
 			break;
 		default:
 			inform('There was an error.');
