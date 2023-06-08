@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-		"start": "node index.js",
-		"index": "node index.js index",
-		"create": "node index.js create",
-		"show": "node index.js show",
-		"update": "node index.js update",
-		"destroy": "node index.js destroy",
-		"total": "node index.js total"
+    "start": "node index.js",
+    "index": "node index.js index",
+    "create": "node index.js create",
+    "show": "node index.js show",
+    "update": "node index.js update",
+    "destroy": "node index.js destroy",
+    "total": "node index.js total"
   },
   "keywords": [],
   "author": "Michael Kleemoff",
