@@ -8,26 +8,29 @@ const chalk = require('chalk');
 
 
 
-function index(arrayOfProducts){
+function index(products){
 
-    return arrayOfProducts.map((eachProduct)=> eachProduct.id+" "+ eachProduct.name).join("/n");
+    return products.map((eachProduct)=> eachProduct.id+" "+ eachProduct.name).join("/n");
 
 }
 
 
 function show(arrayOfProducts,productId){
-    const productToFind= arrayOfProducts.find((product)=> product.id === productId);
-
-    return chalk.blue(productToFind.id) + " " + chalk.blue(productToFind.name) + " " + chalk.blue(productToFind.amount + " " +chalk.blue(productToFind.donation));
-
+    const product= arrayOfProducts.find((product)=> product.id === productId);
+    if(product){
+    return chalk.blue(product) + " " + chalk.blue(product.name) + " " + chalk.blue(product.amount + " " +chalk.blue(product.donation));
+    }
 }
 
 function create (products, productName,productAmount,productDonation) {
+    productDonation= process.argv[4];
     const newProduct = {
-        id: nanoid(4),
+        
+
+        id: nanoid(9),
       name: productName,
       amount: productAmount,
-      donation: productDonation.toFixed(2),
+      donation: productDonation,//(productDonation/100).toFixed(2),
       
       
     };

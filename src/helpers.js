@@ -6,6 +6,8 @@ const { nanoid } = require('nanoid');
 
 const id =nanoid();
 
+//const fs = require("node:fs")
+
 //console.log(id)making sure nanoid is working
 //console.log(chalk.blue(id))// nanoid working with chalk
 

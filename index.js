@@ -18,7 +18,7 @@ function run(){
     switch (action){
         
         case "index":
-            const productsView = index(products);
+            const productsView = index(products,product);
             inform(productsView);
             break;
 
@@ -38,18 +38,20 @@ function run(){
             break;
 
          case "destroy":
-            updatedAProducts = destroy(productss, product);
+            updatedAProducts = destroy(products, product);
             writeToFile = true;
             break;
             
-         case "score":
-            const score = products.reduce((acc, curr) => acc + curr.points, 0);
-            inform("Current score", score);
-            break;
+         
     
         default:
-                inform("Hey, we can't do that Fam :(");
+                inform("Alert, action not possible");
         }
+
+        if (writeToFile) {
+            writeJSONFile("data", "data.json", updatedProducts);
+          }
+          
     
 
 
