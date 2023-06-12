@@ -1,0 +1,20 @@
+[
+	{
+		"id": "z2Xr",
+		"name": "chocolate chip cookie",
+		"amount": 1.89,
+		"donation": 1.05
+	},
+	{
+		"id": "ADuv",
+		"name": "madeleine",
+		"amount": 2.69,
+		"donation": 1.25
+	},
+	{
+		"id": "wvkL",
+		"name": "brownie",
+		"amount": 3.14,
+		"donation": 0.98
+	}
+]
