@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    
+    "create": "node index.js create",
+    "index": "node index.js index",
+    "view": "node index.js view",
+    "update": "node index.js update",
+    "delete": "node index.js delete",
+    "total": "node index.js total"
   },
   "keywords": [],
   "author": "Kenneth Parker",
