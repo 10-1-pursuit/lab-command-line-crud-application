@@ -9,7 +9,12 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "index": "node index.js index",
+    "show": "node index.js show",
+    "update": "node index.js update",
+    "destroy": "node index.js destroy"
   },
   "keywords": [],
   "author": "",
