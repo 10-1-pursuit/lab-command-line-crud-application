@@ -1,7 +1,10 @@
 const inform = console.log;
 
+const { nanoid } = require("nanoid")
+
 const { readJSONFile, writeJSONFile } = require("./src/helpers");
 
+const { create, show, index, edit, destroy } = require("./src/controllers")
 
 function run() {
 
@@ -61,44 +64,43 @@ function run() {
 
             }
 
-
     }
-
-
-    run()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
