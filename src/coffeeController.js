@@ -6,7 +6,8 @@ const {createCoffee} = require("./coffeeCreator");
 const inform = console.log
 
 function index(coffee){
-    return coffee.map((eachCup)=> eachCup.id, eachCup.name, eachCup.amount, eachCup.donation).join("\n");
+   // return coffee.map((eachCup)=> console.log(eachCup));
+    return coffee.map((eachCup)=> eachCup.id, eachCup.name, eachCup.amount, eachCup.donation).join("\n")
  }
  
  
