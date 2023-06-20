@@ -13,11 +13,11 @@ function index(arrayOfPurchases) {
 
 }
 
-function show(purchases, purchaseId, purchaseName) {
+function show(purchases, purchaseId, purchaseName, purchaseQuantity, purchaseTotal) {
     const purchaseToFind = purchases.findIndex((purchase) => purchase.id === purchaseId);
     let stockItems = purchases.find((stock) => stock.name === purchaseName)
-    for (purchaseToFind of purchases) {
-        return `item_SKU: ${chalk.greenBright(purchaseToFind.id)} Purchase Name: ${chalk.yellow(purchaseToFind.name)} Amount: ${chalk.red(purchaseToFind.amount)} Donations: ${chalk.blue(purchaseToFind.donations)}`
+    for (item of purchases) {
+        return `item_SKU: ${chalk.blueBright(item.id)} Purchase Name: ${chalk.yellow(item.name)} Quantity: ${chalk.blueBright(item.quantity)} Amount: ${chalk.red(item.amount)} Total: ${chalk.green(item.total)} Donations: ${chalk.blue(item.donations)}`
     }
 }
 
@@ -40,7 +40,7 @@ function destroy(purchases, purchaseId, purchaseName) {
         if (removeById !== -1) {
             let purchaseRemoved = purchases.splice(removeById, 1);
             inform(`${purchaseRemoved} was successfully removed from cart`);
-            writeJSONFile("./data", "purchase.JSON", purchases)
+            writeJSONFile("./data", "purchase.json", purchases)
             return animals;
         } else {
             inform("Purchase not found. No action taken");
