@@ -4,7 +4,7 @@ const { nanoid } = require("nanoid")
 
 const { readJSONFile, writeJSONFile } = require("./src/helpers");
 
-const { create, show, index, edit, destroy } = require("./src/controllers")
+const { create, show, index, destroy, edit } = require("./src/controllers")
 
 function run() {
 
@@ -72,7 +72,16 @@ run()
 
 
 
+module.exports = {
+    index,
+    create,
+    show,
+    edit,
+    destroy
 
+
+
+}
 
 
 

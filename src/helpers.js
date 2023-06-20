@@ -1,6 +1,6 @@
-const fs = require("node:fs")
+const fs = require("fs")
 
-const { readFileSync, writeFileSync } = require("node:fs")
+const { readFileSync, writeFileSync } = require("fs")
 
 
 
