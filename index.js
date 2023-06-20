@@ -60,7 +60,7 @@ function run() {
 
             if (writeToFile) {
 
-                writeJSONFile("./data", "purchase.JSON", updatedPurchase);
+                writeJSONFile("./data", "purchase.json", updatedPurchase);
 
             }
 

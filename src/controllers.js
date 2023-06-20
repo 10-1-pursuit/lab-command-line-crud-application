@@ -1,5 +1,6 @@
 const inform = console.log;
 const { writeJSONFile } = require("../src/helpers")
+const { purchase } = require("../data/purchase.JSON")
 const { nanoid } = require("nanoid");
 const { chalk } = require("chalk")
 
@@ -20,10 +21,10 @@ function show(purchases, purchaseId, purchaseName) {
     }
 }
 
-function create(purchases, purchaseName, purchaseAmount, inStock) {
+function create(purchases, purchaseName, purchaseAmount, number, inStock) {
     const newPurchase = {
         name: purchaseName,
-        amount: purchaseAmount,
+        amount: number,
         inStock: true,
         donations: number,
         id: nanoid(6),
